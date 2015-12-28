@@ -3,10 +3,10 @@ layout: null
 ---
 
 [
-  {% for post in site.posts%}
+  {% for post in site.posts %}
     {
-      "title": "{{ post.title }}"
-      "content": "{{ post.content }}"
+      "title": "{{ post.title | xml_escape }}"
+      "content": "{{ post.content | xml_escape }}"
     }
   {% endfor %}
 ]
