@@ -1,0 +1,18 @@
+# Site settings
+title: Clean Blog
+header-img: img/home-bg.jpg
+email: your-email@yourdomain.com
+description: "Write your site description here. It will be used as your sites meta description as well!"
+baseurl: "/rainpress-blog"
+url: "http://sakyastelios.github.io"
+twitter_username: SakyaStelios
+github_username:  SakyaStelios
+facebook_username:  Sakya.Stelios
+gems: [jekyll-paginate]
+lang: "es_PE"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+paginate: 7
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "_retro"]

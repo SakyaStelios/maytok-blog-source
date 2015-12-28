@@ -1,0 +1,100 @@
+---
+layout: base
+description: ""
+---
+
+<div class="col-md-7 col-sm-12 col-md-offset-5 main-content">
+    <div class="sub-nav">
+        <a href="#" class="select-posts active">Posts</a>
+        <a href="#" class="select-categories">Categorías</a>
+    </div>
+    <div class="home-page-posts animated fadeIn ">
+        {% for post in paginator.posts %}
+            <article class="post">
+                <div class="post-preview col-xs-10  no-gutter">
+                    <h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+                    {% if post.subtitle %}
+                        <p>{{ post.subtitle }}</p>
+                    {% endif %}
+                    <p class="meta">
+                        <a href="">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</a> en <a href=''>{{ post.category }}</a> <i class="link-spacer"></i> <i class="fa fa-clock-o"></i> {{ post.content | reading_time }}
+                    </p>
+                </div>
+                <div class="col-xs-2  no-gutter">
+                    <img src="{{ "/img/avatar.jpg" | prepend: site.baseurl }}" class="user-icon user-1" alt="user-image">
+                </div>
+            </article>
+        {% endfor %}
+    </div>
+    <div class="home-page-categories hide animated fadeIn ">
+        <div class="category row">
+            <section>                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Storytime</h2>
+                    <a href=''><img src='/demo/writer/jekyll/v1-d-20-2/img/storytime-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Life</h2>
+                    <a href='/demo/writer/jekyll/v1-d-20-2/category/life'><img src='/demo/writer/jekyll/v1-d-20-2/img/life-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Journey</h2>
+                    <a href='/demo/writer/jekyll/v1-d-20-2/category/journey'><img src='/demo/writer/jekyll/v1-d-20-2/img/journey-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Motivation</h2>
+                    <a href='/demo/writer/jekyll/v1-d-20-2/category/motivation'><img src='/demo/writer/jekyll/v1-d-20-2/img/motivation-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Coding</h2>
+                    <a href='/demo/writer/jekyll/v1-d-20-2/category/coding'><img src='/demo/writer/jekyll/v1-d-20-2/img/coding-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Js</h2>
+                    <a href='/demo/writer/jekyll/v1-d-20-2/category/js'><img src='/demo/writer/jekyll/v1-d-20-2/img/js-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Leadership</h2>
+                    <a href='/demo/writer/jekyll/v1-d-20-2/category/leadership'><img src='/demo/writer/jekyll/v1-d-20-2/img/leadership-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Css</h2>
+                    <a href='/demo/writer/jekyll/v1-d-20-2/category/css'><img src='/demo/writer/jekyll/v1-d-20-2/img/css-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+                <div class="category-preview col-xs-6 col-sm-4 ">
+                    <h2>Travel</h2>
+                    <a href='/demo/writer/jekyll/v1-d-20-2/category/travel'><img src='/demo/writer/jekyll/v1-d-20-2/img/travel-thumbnail.jpg' alt="category-image"></a>
+                </div>
+                
+            </section>
+        </div>
+    </div>
+    <!-- Pager -->
+    {% if paginator.total_pages > 1 %}
+    <ul class="pager">
+        {% if paginator.previous_page %}
+        <li class="previous">
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Nuevos Posts</a>
+        </li>
+        {% endif %}
+        {% if paginator.next_page %}
+        <li class="next">
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Antiguos Posts &rarr;</a>
+        </li>
+        {% endif %}
+    </ul>
+    {% endif %}
+    <footer class="split-footer">        
+        <a href="/about">About</a>        
+        <i class="link-spacer"></i>        
+        <a href="/about">Writer 2015</a>        
+    </footer>
+</div>

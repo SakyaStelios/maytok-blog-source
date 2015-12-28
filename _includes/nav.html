@@ -1,0 +1,44 @@
+<div id="menu-target">
+	<ul>
+		<li><i class="fa fa-home"></i><a href="{{site.baseurl}}/">Home</a></li>            
+	</ul>
+</div>
+<section class="sidebar col-md-5 col-sm-12" style='background-image: url({{ "/img/main-header.jpg" | prepend: site.baseurl }});'>
+	<span class="menu-trigger animated fadeInDown">
+		<span class="bar"></span>
+		<span class="bar"></span>
+		<span class="bar"></span>
+	</span>
+	<!-- if the user has javascript disabled they can still use the menu -->
+	<noscript>
+	<div class="no-js-menu">
+		<ul>
+			<li><i class="fa fa-home"></i><a href="{{site.baseurl}}/">Home</a></li>			
+		</ul>
+	</div>
+	</noscript>
+	<!-- end no script -->
+	<div class="site-info">
+		<div class="primary-info">
+			<h1>Valonde Blog</h1>
+			<p>Short stories from around the campfire for a fellow world explorer.</p>
+		</div>		
+		<div class="secondary-info">
+			<p>
+				<a class="btn btn-social-icon btn-facebook">
+				  <span class="fa fa-facebook"></span>
+				</a>
+				<a class="btn btn-social-icon btn-twitter">
+				  <span class="fa fa-twitter"></span>
+				</a>
+				<a class="btn btn-social-icon btn-github">
+				  <span class="fa fa-github"></span>
+				</a>
+				<a class="btn btn-social-icon btn-google">
+				  <span class="fa fa-google"></span>
+				</a>
+			</p>
+		</div>
+		
+	</div>
+</section>
