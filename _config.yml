@@ -15,4 +15,4 @@ lang: "es_PE"
 markdown: kramdown
 permalink: pretty
 paginate: 7
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "_retro"]
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "_retro", "_sosites"]
