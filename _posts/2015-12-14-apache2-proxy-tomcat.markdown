@@ -2,7 +2,7 @@
 layout: "base-post"
 title: Apache2 como proxy para Tomcat con ajp
 subtitle: Una manera fàcil de integrar los dos servidores
-date: {}
+date: 2015-12-14 12:00:00
 author: Giancarlo Ventura
 "header-img": "https://nodesource.com/assets/blog-bg.0dc2e3.jpg"
 category: Servidores
