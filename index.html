@@ -8,7 +8,7 @@ description: ""
         <a href="#" class="select-posts active">Posts</a>
         <a href="#" class="select-categories">Categorías</a>
     </div>
-    <div class="home-page-posts animated fadeIn ">
+    <div class="home-page-posts animated fadeIn">
         {% for post in paginator.posts %}
             <article class="post">
                 <div class="post-preview col-xs-10  no-gutter">
@@ -17,10 +17,10 @@ description: ""
                         <p>{{ post.subtitle }}</p>
                     {% endif %}
                     <p class="meta">
-                        <a href="">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</a> en <a href=''>{{ post.category }}</a> <i class="link-spacer"></i> <i class="fa fa-clock-o"></i>
+                        <a href="">{% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %}</a> en <a href=''>{{ post.category }}</a> <i class="link-spacer"></i>
                     </p>
                 </div>
-                <div class="col-xs-2  no-gutter">
+                <div class="col-xs-2 no-gutter">
                     <img src="{{ "/img/avatar.jpg" | prepend: site.baseurl }}" class="user-icon user-1" alt="user-image">
                 </div>
             </article>

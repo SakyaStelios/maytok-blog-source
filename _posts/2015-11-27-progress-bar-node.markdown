@@ -10,7 +10,7 @@ category:   "nodejs"
 
 <p>Descargar un fichero con Node.js es una tarea sencilla.</p>
 
-<p>Sin embargo, muchas veces queremos <em>observar</em> como va el proceso de descarga y no hay nada mejor que una barra de descarga para controlarlo. Esta pieza de código puede ser útil para esta tarea. </p>
+<p>Sin embargo, muchas veces queremos <em>observar</em> como va el proceso y no hay nada mejor que una barra de descarga para controlarlo. Esta pieza de código puede ser útil para esta tarea.</p>
 
 <script src="https://gist.github.com/SakyaStelios/afdc44ca2ec8391b5ec4.js"></script>
 

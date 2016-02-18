@@ -1,13 +1,14 @@
 ---
 layout:     base-post
-title:      "Generar certificado"
-subtitle:   "Problems look mighty small from 150 miles up"
+title:      "Generar certificados propios"
+subtitle:   "Útiles para test sobre https"
 date:       2015-11-30 12:00:00
 author:     "Giancarlo Ventura"
 header-img: "img/post-bg-06.jpg"
 category:   "Servidores"
 ---
 
+<p>Si deseas probar un proyecto sobre https, te encontrarás con la necesidad de un certificado </p>
 <p>Generar un certificado requiere de tres pasos:</p>
 
 <ul>		
