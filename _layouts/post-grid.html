@@ -1,0 +1,67 @@
+<html lang="en" class=" js csstransitions">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>{{ post.title }}</title>
+	<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content">
+	<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design">
+	<meta name="author" content="Codrops">
+	<link rel="shortcut icon" href="../favicon.ico">
+	{% include head.html %}
+</head>
+
+<body class="view-single noscroll">
+	<div class="container">
+		<button id="menu-toggle" class="menu-toggle"><span>Menu</span></button>
+		{% include sidebar.html %}
+		<div id="theGrid" class="main">
+			<section class="grid">
+				<header class="top-bar">
+					<h2 class="top-bar__headline">Latest articles</h2>
+					<div class="filter">
+						<span>Filter by:</span>
+						<span class="dropdown">Popular</span>
+					</div>
+				</header>
+				<a class="grid__item grid__item--loading grid__item--animate" href="#">
+					<h2 class="title title--preview">On Humans &amp; other Beings</h2>
+					<div class="loader"></div>
+					<span class="category">Stories for humans</span>
+					<div class="meta meta--preview">
+						<img class="meta__avatar" src="img/authors/1.png" alt="author01">
+						<span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span>
+						<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span>
+					</div>
+				</a>
+				<footer class="page-meta">
+					<span>Load more...</span>
+				</footer>
+				<div class="placeholder placeholder--trans-out" style="transform: translate3d(-5px, -5px, 0px);"></div>
+			</section>
+			<section class="content content--show" style="top: 0px;">
+				<div class="scroll-wrap">
+					<article class="content__item content__item--show">
+						<span class="category category--full">{{ page.categories }}</span>
+						<h2 class="title title--full">{{ page.title }}</h2>
+						<div class="meta meta--full">
+							<img class="meta__avatar" src="http://tympanus.net/Development/AnimatedGridLayout/img/authors/1.png" alt="author01">
+							<span class="meta__author">Matthew Walters</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span>
+						</div>
+						{{ content }}
+					</article>
+				</div>
+				<button class="close-button close-button--show"><i class="fa fa-close"></i><span>Close</span></button>
+			</section>
+		</div>
+	</div>
+	<!-- /container -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+</body>
+
+</html>
