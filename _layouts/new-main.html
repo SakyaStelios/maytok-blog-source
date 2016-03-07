@@ -46,7 +46,7 @@
 									<img class="meta__avatar" src="http://tympanus.net/Development/AnimatedGridLayout/img/authors/1.png" alt="author01" />
 									<span class="meta__author">Cargando autor...</span>
 									<span class="meta__date"><i class="fa fa-calendar-o"></i>Cargando fecha...</span>
-									<span class="meta__reading-time"><i class="fa fa-clock-o"></i>Cargando TTR</span>
+									<span class="meta__reading-time"><i class="fa fa-clock-o"></i>Cargando TTR...</span>
 								</div>
 						</article>
 						{% endfor %}
@@ -61,13 +61,23 @@
 		<script type="text/javascript">
 			$(document).on('click', '.grid__item', function(){
 				console.log('Text clicked');
+				var semiurl =  $(this).data('url');
 				var url = location.origin + $(this).data('url');
 				console.log('Trayendo la url: ', url);
 				$.get( url, function( data ) {
 					var w = $(data).find('.content__item--show');
 					console.log(w.html());
 					$( ".content__item" ).html(w.html());
+					//Replacing the url
+					var stateObj = { foo: "bar" };
+					window.history.pushState(stateObj, "page 2", semiurl);
 				});
+			});
+		</script>
+		<script type="text/javascript">
+			$(document).on('click', '.close-button', function() {
+				console.log('Cerrando post');
+				window.history.back();
 			});
 		</script>
 	</body>

@@ -1,0 +1,8 @@
+---
+layout: post-grid
+title:  "Habilitar WebGL en Ionic con Crosswalk"
+date:   2016-03-08 15:23:34
+categories: mobile
+---
+
+En android, puede ser complicado mostrar proyectos basados en WebGL si se usa ionic
