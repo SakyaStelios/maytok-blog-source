@@ -1,8 +1,10 @@
 ---
-layout: post-grid
-title:  "Habilitar WebGL en Ionic con Crosswalk"
-date:   2016-02-19 15:23:34
-categories: mobile
+layout:     post-grid
+title:      "Habilitar WebGL en Ionic con Crosswalk"
+date       : 2016-02-19 15:23:34
+categories : Mobile
+author     : "Giancarlo Ventura"
+tags       : [ionic, crosswalk]   
 ---
 
 En Android, puede ser complicado mostrar proyectos basados en WebGL si se usa Ionic Framework. 
@@ -39,12 +41,10 @@ ionic browser add crosswalk
 Y Crosswalk estará habilitado en tu proyecto. Ahora, solo te falta añadir unas líneas más:
 Y es que por defecto, Chromium tiene una lista negra de GPU's, en donde no permite ejecutar
 WebGL. Puedes dejarla como está, pero no funcionará en muchos dispositivos. Así que en el archivo 
-`confix.xml` solo tienes que agregar el siguiente flag: `--ignore-gpu-blacklist`
+`config.xml` solo tienes que agregar el siguiente flag: `--ignore-gpu-blacklist`
 
 {% highlight xml %}
 <preference name="xwalkCommandLine" value="--disable-pull-to-refresh-effect --ignore-gpu-blacklist" />
 {% endhighlight %}
 
 ¿Sencillo, verdad? Ahora WebGL funciona en tu proyecto.
-
-
