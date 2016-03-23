@@ -74,6 +74,7 @@
 		<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
 		<script src="{{ "/js/jquery.timeago.js" | prepend: site.baseurl }}"></script>
 		<script src="{{ "/js/jquery.readingTime.min.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/js/prism.js" | prepend: site.baseurl }}"></script>
 		<script type="text/javascript">
 			$(document).on('click', '.grid__item', function(){
 				console.log('Text clicked');
@@ -82,8 +83,9 @@
 				console.log('Trayendo la url: ', url);
 				$.get( url, function( data ) {
 					var w = $(data).find('.content__item--show');
-					console.log(w.html());
 					$( ".content__item" ).html(w.html());
+					//Higlight all
+					Prism.highlightAll();
 					//Replacing the url
 					var stateObj = { foo: "bar" };
 					window.history.pushState(stateObj, "page 2", semiurl);
