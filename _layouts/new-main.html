@@ -91,6 +91,8 @@
 					window.history.pushState(stateObj, "page 2", semiurl);
 					//Fill the reading time
 					$('#post-content').readingTime();
+					//Fill the timeago
+					$("time.timeago").timeago();
 				});
 			});
 		</script>
