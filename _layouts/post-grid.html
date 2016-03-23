@@ -1,4 +1,4 @@
-<html lang="en" class=" js csstransitions">
+<html lang="es" class=" js csstransitions">
 
 <head>
 	{% include new-head.html %}
@@ -34,19 +34,19 @@
 			</section>
 			<section class="content content--show" style="top: 0px;">
 				<div class="scroll-wrap">
-					<article class="content__item content__item--show">
+					<article class="content__item content__item--show" id="post-content">
 						<span class="category category--full">{{ page.categories }}</span>
 						<h2 class="title title--full">{{ page.title }}</h2>
 						<div class="meta meta--full">
 							<img class="meta__avatar" src="https://robohash.org/Khan" alt="author01"  height="45" width="45" />
 							<span class="meta__author">{{ page.author }}</span>
-							<span class="meta__date"><i class="fa fa-calendar-o"></i> 9 Apr</span>
-							<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min read</span>
+							<span class="meta__date"><i class="fa fa-calendar-o"></i><time class="timeago" datetime="{{ page.date | date_to_xmlschema }}">Cargando...</time></span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><span class="eta">3 min read</span></span>
 						</div>
 						{{ content }}
 					</article>
 				</div>
-				<button class="close-button close-button--show"><i class="fa fa-close"></i><span>Close</span></button>
+				<button class="close-button close-button--show"><i class="fa fa-close"></i><span>Cerrar</span></button>
 			</section>
 		</div>
 	</div>
@@ -54,6 +54,15 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 	<script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
 	<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/jquery.timeago.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/jquery.readingTime.min.js" | prepend: site.baseurl }}"></script>
+	<script src="{{ "/js/prism.js" | prepend: site.baseurl }}"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function() {
+    		$("time.timeago").timeago();
+   		});
+   		$('#post-content').readingTime();
+	</script>
 </body>
 
 </html>

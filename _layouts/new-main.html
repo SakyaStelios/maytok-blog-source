@@ -17,28 +17,41 @@
 						</div>
 					</header>
 					
-					{% for post in site.posts %}
+					{% for post in paginator.posts %}
 						<a class="grid__item" href="#" data-url="{{ post.url }}">
 							<h2 class="title title--preview">{{ post.title }}</h2>
 							<div class="loader"></div>
 							<span class="category">{{ post.categories }}</span>
 							<div class="meta meta--preview">
-								<img class="meta__avatar" src="https://robohash.org/Khan" alt="author01"  height="45" width="45" /> 
-								<span class="meta__date"><i class="fa fa-calendar-o"></i> {{ post.date | date: '%B %d, %Y' }} </span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min reading</span>
+								<img class="meta__avatar" src="http://www.maytok.com/img/profile-photo.jpg" alt="author"  height="45" width="45" /> 
+								<span class="meta__date"><i class="fa fa-calendar-o"></i><time class="timeago" datetime="{{ post.date | date_to_xmlschema }}">Cargando...</time></span>
+								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min de lectura</span>
 							</div>
 						</a>
 					{% endfor %}
 
 					<footer class="page-meta">
-						<span>Ver más...</span>
+						<!-- Pagination links -->
+						<div class="pagination">
+						  	{% if paginator.previous_page %}
+						    	<a href="{{ paginator.previous_page_path }}" class="previous">Anterior</a>
+						  	{% else %}
+						    <span class="previous">Anterior</span>
+						  	{% endif %}
+						  	<span class="page_number ">Pág: {{ paginator.page }} de {{ paginator.total_pages }}</span>
+						  	{% if paginator.next_page %}
+						    	<a href="{{ paginator.next_page_path }}" class="next">Sig.</a>
+						  	{% else %}
+						    	<span class="next ">Sig.</span>
+						  	{% endif %}
+						</div>
 					</footer>
 				</section>
 				
 				<section class="content">
 					<div class="scroll-wrap">
 						
-						{% for post in site.posts %}
+						{% for post in paginator.posts %}
 							<article class="content__item">
 								<span class="category category--full">Cargando título...</span>
 								<h2 class="title title--full">Cargando categoría...</h2>
@@ -51,6 +64,7 @@
 						</article>
 						{% endfor %}
 					</div>
+					
 					<button class="close-button"><i class="fa fa-close"></i><span>Cerrar</span></button>
 				</section>
 			</div>
@@ -58,6 +72,8 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 		<script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
 		<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/js/jquery.timeago.js" | prepend: site.baseurl }}"></script>
+		<script src="{{ "/js/jquery.readingTime.min.js" | prepend: site.baseurl }}"></script>
 		<script type="text/javascript">
 			$(document).on('click', '.grid__item', function(){
 				console.log('Text clicked');
@@ -71,6 +87,8 @@
 					//Replacing the url
 					var stateObj = { foo: "bar" };
 					window.history.pushState(stateObj, "page 2", semiurl);
+					//Fill the reading time
+					$('#post-content').readingTime();
 				});
 			});
 		</script>
@@ -79,6 +97,9 @@
 				console.log('Cerrando post');
 				window.history.back();
 			});
+			jQuery(document).ready(function() {
+    			$("time.timeago").timeago();
+   			});
 		</script>
 	</body>
 </html>

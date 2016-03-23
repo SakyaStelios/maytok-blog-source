@@ -103,6 +103,7 @@
 					if ("activeElement" in document)
     					document.activeElement.blur();
 					hideContent();
+					window.history.back();
 				}
 			}
 		} );

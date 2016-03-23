@@ -63,7 +63,7 @@ h1 span{
     color: #444;
 }
 
-p {
+p, ul {
     margin-top: 29px;
     font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
     font-weight: 400;

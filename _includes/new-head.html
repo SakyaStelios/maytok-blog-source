@@ -1,15 +1,23 @@
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ site.title }}</title>
-<meta name="description" content="A responsive, magazine-like website layout with a grid item animation effect when opening the content" />
-<meta name="keywords" content="grid, layout, effect, animated, responsive, magazine, template, web design" />
-<meta name="author" content="Codrops" />
-<link rel="shortcut icon" href="../favicon.ico">
+<title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ site.description }}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+<meta name="author" content="Giancarlo Ventura" />
+<link rel="shortcut icon" href="http://www.maytok.com/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" type="text/css" href="{{ " /css/normalize.css " | prepend: site.baseurl }}" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="{{ " /css/style1.css " | prepend: site.baseurl }}" />
 <link rel="stylesheet" type="text/css" href="{{ " /css/custom.css " | prepend: site.baseurl }}" />
-<link rel="stylesheet" type="text/css" href="{{ " /css/solarized-dark.css " | prepend: site.baseurl }}" />
+<!-- <link rel="stylesheet" type="text/css" href="{{ " /css/solarized-dark.css " | prepend: site.baseurl }}" /> -->
+<!-- <link rel="stylesheet" type="text/css" href="{{ " /css/prism.css " | prepend: site.baseurl }}" /> -->
+<link rel="stylesheet" type="text/css" href="{{ " /css/prism.css " | prepend: site.baseurl }}" />
 <script src="{{ " /js/modernizr.custom.js " | prepend: site.baseurl }}"></script>
-<link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" type="text/css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
