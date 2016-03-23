@@ -17,10 +17,11 @@ complicado y lleno de espinos. Nuestra ruta adornada de flores será:
 
 **¿Choco qué?**
 
-Chocolatey no es más que un gestor de paquetes al estilo Linux, solo que para Windows.
-¡Sí, puedes usar la consola de comandos de Windows para instalar programas!
+[Chocolatey](https://chocolatey.org/) es un excelente gestor de paquetes al estilo Linux, solo que para Windows.
+¡Sí, puedes usar la consola de comandos de Windows para instalar programas! En el día de creación
+de este post, hay casi 3800 paquetes que [puedes instalar](https://chocolatey.org/packages). 
 
-Para comenzar a usarlo, abre una consola con permisos administrativos y escribe:
+Vamos a instalarlo. Abre una consola con permisos administrativos y escribe:
 
 <pre>
 <code class="language-powershell">
