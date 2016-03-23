@@ -1,8 +1,9 @@
 ---
 layout: post-grid
 title:  "Instalar Jekyll en Windows sin dolor"
-date:   2016-02-19 15:23:34
+date:   2016-03-23 15:23:34
 categories: Jekyll
+author     : "Giancarlo Ventura"
 tags       : [jekyll, ruby, windows] 
 ---
 
@@ -33,7 +34,7 @@ Cuando se instale, necesitarás cerrar la consola y abrir una nueva (También co
 
 <pre>
 <code class="language-bash">
-    choco install ruby -y
+choco install ruby -y
 </code>
 </pre>
 
@@ -43,7 +44,7 @@ Cierras y abres una nueva consola (Tranquilo...)
 
 <pre>
 <code class="language-bash">
-    gem install jekyll
+gem install jekyll
 </code>
 </pre>
 
@@ -52,8 +53,8 @@ fácil y sin dolor
 
 <pre>
 <code class="language-bash">
-    jekyll new mysite
-    cd mysite
-    jekyll serve
+jekyll new mysite
+cd mysite
+jekyll serve
 </code>
 </pre>
