@@ -25,7 +25,7 @@
 							<div class="meta meta--preview">
 								<img class="meta__avatar" src="http://www.maytok.com/img/profile-photo.jpg" alt="author"  height="45" width="45" /> 
 								<span class="meta__date"><i class="fa fa-calendar-o"></i><time class="timeago" datetime="{{ post.date | date_to_xmlschema }}">Cargando...</time></span>
-								<span class="meta__reading-time"><i class="fa fa-clock-o"></i> 3 min de lectura</span>
+								<span class="meta__reading-time"><i class="fa fa-clock-o"></i>{{ post.content | readtime }}</span>
 							</div>
 						</a>
 					{% endfor %}
@@ -61,7 +61,7 @@
 									<span class="meta__date"><i class="fa fa-calendar-o"></i>Cargando fecha...</span>
 									<span class="meta__reading-time"><i class="fa fa-clock-o"></i>Cargando TTR...</span>
 								</div>
-						</article>
+							</article>
 						{% endfor %}
 					</div>
 					
@@ -73,7 +73,6 @@
 		<script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
 		<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
 		<script src="{{ "/js/jquery.timeago.js" | prepend: site.baseurl }}"></script>
-		<script src="{{ "/js/jquery.readingTime.min.js" | prepend: site.baseurl }}"></script>
 		<script src="{{ "/js/prism.js" | prepend: site.baseurl }}"></script>
 		<script type="text/javascript">
 			$(document).on('click', '.grid__item', function(){
@@ -89,8 +88,6 @@
 					//Replacing the url
 					var stateObj = { foo: "bar" };
 					window.history.pushState(stateObj, "page 2", semiurl);
-					//Fill the reading time
-					$('#post-content').readingTime();
 					//Fill the timeago
 					$("time.timeago").timeago();
 				});

@@ -11,9 +11,9 @@ email: khan@maytok.com
 description: "Apuntes sobre desarrollo y tecnología en general."
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://dev.maytok.com" # the base hostname & protocol for your site
-twitter_username: sakyastelios
-github_username:  SakyaStelios
-paginate: 5
+twitter_username: KhanMaytok
+github_username:  KhanMaytok
+paginate: 12
 permalink: pretty
 gems: [jekyll-paginate]
 
