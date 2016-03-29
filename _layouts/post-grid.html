@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es" class=" js csstransitions">
 
 <head>
@@ -41,7 +42,7 @@
 							<img class="meta__avatar" src="http://www.maytok.com/img/profile-photo.jpg" alt="author"  height="45" width="45" />
 							<span class="meta__author">{{ page.author }}</span>
 							<span class="meta__date"><i class="fa fa-calendar-o"></i><time class="timeago" datetime="{{ page.date | date_to_xmlschema }}">Cargando...</time></span>
-							<span class="meta__reading-time"><i class="fa fa-clock-o"></i><span class="eta">3 min read</span></span>
+							<span class="meta__reading-time"><i class="fa fa-clock-o"></i>{{ content | readtime }}</span>
 						</div>
 						{{ content }}
 					</article>
@@ -55,13 +56,11 @@
 	<script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
 	<script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
 	<script src="{{ "/js/jquery.timeago.js" | prepend: site.baseurl }}"></script>
-	<script src="{{ "/js/jquery.readingTime.min.js" | prepend: site.baseurl }}"></script>
 	<script src="{{ "/js/prism.js" | prepend: site.baseurl }}"></script>
 	<script type="text/javascript">
 		jQuery(document).ready(function() {
     		$("time.timeago").timeago();
    		});
-   		$('#post-content').readingTime();
 	</script>
 </body>
 

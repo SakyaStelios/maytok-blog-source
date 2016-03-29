@@ -1,0 +1,5 @@
+#!/bin/bash
+
+jekyll build
+touch _site/CNAME
+echo "dev.maytok.com" >> _site/CNAME
