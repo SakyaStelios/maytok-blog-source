@@ -19,3 +19,4 @@ gems: [jekyll-paginate]
 
 # Build settings
 markdown: kramdown
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md", "build"]
