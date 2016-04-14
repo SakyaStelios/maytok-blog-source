@@ -18,8 +18,8 @@ module ReadTime
 		
 		minutes = 1 if minutes === 0
 		
-		minutes_label = minutes === 1 ? " minuto" : " minutos"
-		minutes > 0 ? "Léelo en #{minutes} #{minutes_label}" : "1 minuto"
+		minutes_label = minutes === 1 ? " min." : " mins."
+		minutes > 0 ? "Léelo en #{minutes} #{minutes_label}" : "1 min"
   end
 end
 
