@@ -1,13 +1,14 @@
 ---
-layout: post-grid
-title:  "Instalar Jekyll en Windows sin dolor"
-date:   2016-03-23 15:23:34
-categories: Jekyll
+layout     : post-grid
+title      : "Instalar Jekyll en Windows sin dolor"
+date       : 2016-04-14 15:04:34
+categories : Jekyll
 author     : "Giancarlo Ventura"
 tags       : [jekyll, ruby, windows] 
 ---
 
-Instalar Jekyll en Windows puede ser un auténtico dolor. Afortunadamente, la cantidad de pasos puede reducirse 
+Instalar Jekyll en Windows por vez primera puede ser un auténtico dolor... en la parte del cuerpo que quieras.
+Afortunadamente, la cantidad de pasos puede reducirse 
 significativamente y podemos comenzar a crear nuestros sitios estáticos sin seguir un camino
 complicado y lleno de espinos. Nuestra ruta adornada de flores será:
 
@@ -19,9 +20,18 @@ complicado y lleno de espinos. Nuestra ruta adornada de flores será:
 
 [Chocolatey](https://chocolatey.org/) es un excelente gestor de paquetes al estilo Linux, solo que para Windows.
 ¡Sí, puedes usar la consola de comandos de Windows para instalar programas! En el día de creación
-de este post, hay casi 3800 paquetes que [puedes instalar](https://chocolatey.org/packages). 
+de este post, hay casi 3800 paquetes que [puedes instalar](https://chocolatey.org/packages).
 
-Vamos a instalarlo. Abre una consola con permisos administrativos y escribe:
+Espera... ¿Quién eres tú?
+
+**Soy una línea en negrita que simula una voz en tu cabeza. ¿De veras crees**
+**que el blog conseguirá visitas inventándome?**
+
+No lo sé, igual podemos eliminarte después.
+
+**¿Ehmm, podemos comenzar ya?**
+
+Bien, vamos a instalarlo. Abre una consola con permisos administrativos y escribe:
 
 <pre>
 <code class="language-powershell">
@@ -50,7 +60,7 @@ gem install jekyll
 </pre>
 
 Y eso es todo lo que se necesita. Ahora puedes comenzar a crear sitios estáticos
-fácil y sin dolor
+fácil y sin dolor. 
 
 <pre>
 <code class="language-bash">
@@ -59,3 +69,10 @@ cd mysite
 jekyll serve
 </code>
 </pre>
+
+A propósito, este sitio está soportado en Jekyll y albergado
+en Github. Si quieres, puedes echar un vistazo al [repositorio](https://github.com/KhanMaytok/maytok-blog-source). 
+(Siento el código desordenado, prometo echarle una revisión después)
+
+El template está basado por completo en un [artículo](http://tympanus.net/codrops/2015/04/15/grid-item-animation-layout/) de [Mary Lou](http://tympanus.net/codrops/author/crnacura/) 
+para [Codrops](http://tympanus.net/codrops).

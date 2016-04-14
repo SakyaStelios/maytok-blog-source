@@ -1,7 +1,7 @@
 ---
 layout:     post-grid
 title:      "Habilitar WebGL en Ionic con Crosswalk"
-date       : 2016-02-19 15:23:34
+date       : 2016-04-14 15:14:34
 categories : Mobile
 author     : "Giancarlo Ventura"
 tags       : [ionic, crosswalk]   
@@ -10,10 +10,12 @@ tags       : [ionic, crosswalk]
 En Android, puede ser complicado mostrar proyectos basados en WebGL si se usa Ionic Framework. 
 Ionic se basa en Cordova, que permite desarrollar aplicaciones basadas en un WebView.
 
-¿Cuál es el problema? WebGL no es soportado en WebViews antes de Android Lollipop.
+¿Cuál es el problema? WebGL no es soportado en WebViews para versiones anteriores que 
+Android Lollipop.
 En KitKat, Android cambió a Chromium como la implementación de  WebView nativa, 
-pero está bloqueada a Chromium 33, que no tiene WebGL. En Lollipop, sin embargo, puedes habilitarlo
-a través de una actualización vía Play Store, para habilitar el soporte. (fuente: https://developer.chrome.com/multidevice/webview/overview)
+pero está bloqueada a Chromium 33, que no tiene WebGL. En Lollipop, sin embargo, 
+puedes habilitarlo a través de una actualización vía Play Store, para habilitar el soporte. 
+(fuente: https://developer.chrome.com/multidevice/webview/overview)
 
 **¿Wow, wow, y para las otras versiones de Android? ¿Imposible?**
 
@@ -32,7 +34,7 @@ sino que también puedes modificarlo.
 
 **¿Y está en Ionic?**
 
-¡Sí en Android! solo tienes que ejecutar:
+¡Claro! solo tienes que ejecutar:
 
 {% highlight cli %}
 ionic browser add crosswalk
