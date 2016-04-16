@@ -1,7 +1,7 @@
 ---
 layout:     post-grid
 title:      "Importación masiva con doctrine"
-date       : 2016-04-14 15:14:34
+date       : 2016-04-16 09:14:34
 categories : PHP
 author     : "Giancarlo Ventura"
 tags       : [doctrine, php, mysql]   
