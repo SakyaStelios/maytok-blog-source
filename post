@@ -3,4 +3,9 @@
 git add --all
 git commit -m "Build"
 git push origin master
+cd _site
+git add --all
+git commit -m "Build"
+git push origin gh-pages
+cd ..
 
