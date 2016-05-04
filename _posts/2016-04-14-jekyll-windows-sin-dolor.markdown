@@ -22,7 +22,7 @@ complicado y lleno de espinos. Nuestra ruta adornada de flores será:
 ¡Sí, puedes usar la consola de comandos de Windows para instalar programas! En el día de creación
 de este post, hay casi 3800 paquetes que [puedes instalar](https://chocolatey.org/packages).
 
-Espera... ¿Quién eres tú?
+<p id="wokili"> Espera... ¿Quién eres tú?</p>
 
 **Soy una línea en negrita que simula una voz en tu cabeza. ¿De veras crees**
 **que el blog conseguirá visitas inventándome?**

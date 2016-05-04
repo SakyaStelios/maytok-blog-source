@@ -4,3 +4,11 @@ jekyll build
 touch _site/CNAME
 echo "dev.maytok.com" >> _site/CNAME
 echo "Process completed"
+cd _site
+git add --all
+git commit -m "Deploying"
+git push origin gh-pages
+cd ..
+git add --all
+git commit -m "Deploying"
+git push origin master
