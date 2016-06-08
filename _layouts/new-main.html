@@ -75,11 +75,14 @@
 		<script src="{{ "/js/jquery.timeago.js" | prepend: site.baseurl }}"></script>
 		<script src="{{ "/js/prism.js" | prepend: site.baseurl }}"></script>
 		<script type="text/javascript">
+			var page_title = document.title;
 			$(document).on('click', '.grid__item', function(){
 				console.log('Text clicked');
+				var new_title = $(this).find('h2').text();
 				var semiurl =  $(this).data('url');
 				var url = location.origin + $(this).data('url');
 				console.log('Trayendo la url: ', url);
+				document.title = new_title + ' - ' + document.title
 				$.get( url, function( data ) {
 					var w = $(data).find('.content__item--show');
 					$( ".content__item" ).html(w.html());
@@ -92,10 +95,9 @@
 					$("time.timeago").timeago();
 				});
 			});
-		</script>
-		<script type="text/javascript">
 			$(document).on('click', '.close-button', function() {
 				console.log('Cerrando post');
+				document.title = page_title;
 				window.history.back();
 			});
 			jQuery(document).ready(function() {
