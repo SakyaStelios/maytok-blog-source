@@ -5,6 +5,7 @@ touch _site/CNAME
 echo "dev.maytok.com" >> _site/CNAME
 echo "Process completed"
 cd _site
+git checkout gh-pages
 git add --all
 git commit -m "Deploying :rocket:"
 git push origin gh-pages
