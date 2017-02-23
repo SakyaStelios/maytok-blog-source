@@ -1,6 +1,6 @@
 #!/bin/bash
 
-jekyll build
+bundle exec jekyll build
 touch _site/CNAME
 echo "dev.maytok.com" >> _site/CNAME
 echo "Process completed"
