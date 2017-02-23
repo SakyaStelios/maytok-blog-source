@@ -1,0 +1,36 @@
+---
+title: 'Día 1 - El blog | #100DaysOfCode '
+layout: post-grid
+date: '2017-02-23 01:13:00'
+categories: jekyll
+author: Giancarlo Ventura
+tags:
+- jekyll
+- blog
+- Github Pages
+---
+
+El día uno está dedicado a... este blog.
+
+¿Trampa? Quizá.
+
+Primiero, el motor: este blog está realizado gracias a [Jekyll](https://jekyllrb.com/), un generador de páginas estáticas hecho en Ruby. Lo hemos elegido por su simplicidad: solo necesitas instalarlo y funciona. Además está orientado a blogs, aunque por supuesto, puedes usarlo para cualquier otra estructura que desees.
+
+Quizá puede parecer poco productivo y uno podría preguntarse por qué no usar soluciones más potentes como Wordpress, pero en este caso, Jekyll es todo lo que necesito. Sin bases de datos, y usa el poder de Markdown. Para administrarlo, tenemos un plugin bastante útil: [Jekyll Admin](https://github.com/jekyll/jekyll-admin) que nos brinda las funcionalidades clásicas de un CMS.
+
+Si lo deseas, puedes [darle un vistazo al repositorio]https://github.com/khanmaytok/maytok-blog-source) y sugerir cambios y mejoras. 
+
+El tema está tomado integramente del artículo [Grid Item Animation Layout](https://tympanus.net/codrops/2015/04/15/grid-item-animation-layout/) del fantástico sitio Codrops. Las adaptaciones que se han hecho han sido mínimas y me ha gustado mucho el efecto de carga y el estilo mínimal del tema.
+
+<p class="text-center">
+<img src="https://codropspz-tympanus.netdna-ssl.com/codrops/wp-content/uploads/2015/04/GridItemAnimation_02.jpg"/>
+</p>
+
+¿El hosting? Github Pages. Podemos usar un repositorio de Github para publicar páginas estáticas de acuerdo, claro, a las políticas de la organización y para optimizar la entrega del contenido usamos el CDN gratuito que nos brinda CloudFlare. 
+
+Como puedes ver, montar un blog puede ser bastante sencillo y fácil.
+
+Recuerda que siempre puedes sugerir cambios a esta publicación y realizar críticas demoledoras en cualquier momento
+
+¡Eso ese todo por ahora. Nos estamos leyendo!
+
